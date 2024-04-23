@@ -1,5 +1,6 @@
 import { StyleSheet, View, Pressable, Text, TextInput, Button} from "react-native";
 import React, {useState} from "react";
+import Checkbox from "expo-checkbox";
 {/*import TodoItem from "./TodoItem"; */}
 
 export default function TaskManager() {
@@ -26,7 +27,7 @@ export default function TaskManager() {
         <View> 
             {tasks.map(task=> (
                 <View style={styles.todoItem}>
-                    <CheckBox 
+                    <Checkbox 
                         style={styles.checkbox}
                         value={task.completed}
                         onValueChange={() =>toggleCompleted(task.id)}
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
         color: '#888',
     },
     title: {
-        textDecorationLine: 'line-through',
+        textDecorationLine: 'none',
         marginRight: 8,
         color: "#333",
     }

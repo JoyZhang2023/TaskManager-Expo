@@ -1,6 +1,6 @@
 import { StyleSheet, View, Pressable, Text, TextInput, Button} from "react-native";
 import React, {useState} from "react";
-import TodoItem from "./TodoItem";
+{/*import TodoItem from "./TodoItem"; */}
 
 export default function TaskManager() {
     const [tasks, setTasks] = useState([{
@@ -48,3 +48,23 @@ export default function TaskManager() {
     );
 }
 
+const styles = StyleSheet.create({
+    todoItem: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 8,
+        padding: 8,
+        borderBottomWidth: 1,
+        borderRadius: 4,
+    },
+    checkbox: {
+        textDecorationLine: 'line-through',
+        color: '#888',
+    },
+    title: {
+        textDecorationLine: 'line-through',
+        marginRight: 8,
+        color: "#333",
+    }
+});
